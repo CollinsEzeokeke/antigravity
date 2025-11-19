@@ -33,7 +33,7 @@ export function Navbar() {
             <div className="container mx-auto flex h-20 items-center justify-between px-6 md:px-12">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 z-50">
-                    <span className="text-2xl font-bold tracking-tighter">
+                    <span className={cn("text-2xl font-bold tracking-tighter", isScrolled ? "text-foreground" : "text-black")}>
                         MODERN<span className="font-light">SHOP</span>
                     </span>
                 </Link>
@@ -44,7 +44,7 @@ export function Navbar() {
                         <Link
                             key={item}
                             href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                            className="relative text-muted-foreground transition-colors hover:text-foreground group py-2"
+                            className={cn("relative transition-colors hover:text-foreground group py-2", isScrolled ? "text-muted-foreground" : "text-black/90")}
                         >
                             {item}
                             <span className="absolute inset-x-0 bottom-0 h-px scale-x-0 bg-foreground transition-transform duration-300 group-hover:scale-x-100" />
