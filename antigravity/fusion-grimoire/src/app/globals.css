@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #1a1a1a;
+  --foreground: #d4af37;
+  --parchment: #e6d2b5;
+  --ink: #2c1810;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Courier New', Courier, monospace;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom Scrollbar for the Scroll effect */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2c1810; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4af37; 
+  border-radius: 6px;
+  border: 3px solid #2c1810;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f0c040; 
+}
+
+.medieval-font {
+  font-family: 'Times New Roman', Times, serif;
+}
